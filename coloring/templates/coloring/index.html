@@ -53,23 +53,62 @@
 				history: ["#000000"], // black selected by default
 				options: [],
 				$container: $('#color-palette')
-			}
+			};
 
 			// your rectangle gradient interaction goes in this function
 			// you may also add code outside of the function (e.g., global variables)
 			function myGradientInteraction(){
 				var tool = new paper.Tool();
 
+				// var topLeft = view.center - [80, 80];
+				// var bottomRight = view.center + [80, 80];
+				// var a = paper.POINTS(100, 100);
+				// var b = paper.POINTS(0, 0);
+				// view.center
+				var a = new paper.Point(0, 0);
+				var b = new paper.Point(150, 100);
+				// var a = view.getCenter();
+				var rectangle = new paper.Rectangle(a, b, 100, 200);
+				var path = new paper.Path.Rectangle(rectangle);
+				path.fillColor = 'red';
+
+				//
+				//
+				// var path = new Path.Rectangle({
+				// 	topLeft: topLeft,
+				// 	bottomRight: bottomRight,
+				//
+				// 	fillColor: {
+				// 		gradient: {
+				// 			stops: ['yellow', 'red', 'blue']
+				// 		},
+				// 		origin: topLeft,
+				// 		destination: bottomRight
+				// 	}
+				//
+				// });
+
 				tool.onMouseDown = function (event) {
+
+					// var rectangle = new paper.Rectangle(a, b, width, height);
+					// var path = new paper.Path.Rectangle(rectangle);
+					// path.fillColor = 'red';
 
 				}
 
 				tool.onMouseUp = function (event) {
-					
+
+					// var rectangle = new paper.Rectangle(a, b, width, height);
+					// var path = new paper.Path.Rectangle(rectangle);
+					// path.fillColor = 'red';
 				}
 			}
 
 			// your custom interaction goes here!
+
+
+
+
 			// you may replace everything
 			function myCustomInteraction() {
 				var tool = new paper.Tool();
